@@ -1,5 +1,8 @@
 package es.upm.dit.apsv.traceserver.repository;
 
-public class TraceRepository {
+import org.springframework.data.repository.CrudRepository;
 
+import es.upm.dit.apsv.traceserver.model.Trace;
+
+public interface TraceRepository extends CrudRepository<Trace, String> {
 }
