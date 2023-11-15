@@ -50,4 +50,19 @@ public class TransportationOrder {
         return Math.sqrt(Math.pow(this.dstLat - this.lastLat, 2) + Math.pow(this.dstLong - this.lastLong, 2));
     }
 
+    // hashCode and equal methods
+    @Override
+    public int hashCode() {
+        return this.toid.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof TransportationOrder) {
+            TransportationOrder to = (TransportationOrder) obj;
+            return this.toid.equals(to.toid);
+        }
+        return false;
+    }
+
 }
