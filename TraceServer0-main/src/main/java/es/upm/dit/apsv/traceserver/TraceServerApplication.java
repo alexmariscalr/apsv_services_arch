@@ -38,8 +38,8 @@ public class TraceServerApplication {
 	@Bean("consumer")
 	public Consumer<Trace> checkTrace() {
 		return t -> {
-                          log.info("Order: "+ t);
-			}
+			log.info("Order: " + t);
 		};
 	}
+
 }
